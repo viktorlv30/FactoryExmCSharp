@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\ElfFactory.cs" />
+    <Compile Include="Factory\HeroFactory.cs" />
+    <Compile Include="Factory\VoinFactory.cs" />
+    <Compile Include="Hero.cs" />
     <Compile Include="Movement.cs" />
     <Compile Include="FlyMove.cs" />
     <Compile Include="JumpMove.cs" />

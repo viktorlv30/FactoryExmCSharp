@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FactoryExample.Factory;
 
 namespace FactoryExample
 {
@@ -10,15 +11,14 @@ namespace FactoryExample
     {
         static void Main(string[] args)
         {
-            Sword sw = new Sword();
-            Pistol ps = new Pistol();
-            FlyMove fly = new FlyMove();
-            JumpMove jp = new JumpMove();
 
-            sw.Hit();
-            ps.Hit();
-            fly.Move();
-            jp.Move();
+            Hero voin = new Hero(new VoinFactory());
+            voin.Hit();
+            voin.Run();
+
+            Hero elf = new Hero(new ElfFactory());
+            elf.Hit();
+            elf.Run();
 
             Console.ReadKey();
 
